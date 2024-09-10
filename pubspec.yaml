@@ -1,6 +1,6 @@
 name: language_service
 description: "Simplifies multilingual support and translation management for Flutter apps."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/yavuzfeti/language_service
 
 environment:

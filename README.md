@@ -19,8 +19,7 @@ The `language_service` package is designed to provide multi-language support in 
    dependencies:
      flutter:
        sdk: flutter
-     language_service:
-       path: <path_to_language_service_package>
+     language_service: 0.0.2
 ```
 
 Configuring Language Files
@@ -113,8 +112,6 @@ DEF: Content of the loaded language file.
 v(String word): Returns the language translation corresponding to the given key.
 
 initialize({required String languageFolderPath, required List<String> languageCodes}): Initializes by taking the path to the language files and the language codes.
-
-saveLanguage(int value): Saves and changes the selected language.
 
 changeLanguage(int value): Changes and updates the active language.
 

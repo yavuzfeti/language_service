@@ -1,4 +1,19 @@
-# `language_service` Package - Version 1 Changelog
+# `language_service` Package - Changelog
+
+## Version 2.0.0
+
+### Major Updates
+- **saveLanguage Method Removed**: The `saveLanguage` method has been removed in favor of a new, more streamlined method.
+- **changeLanguage Method Added**: Introduced the `changeLanguage` method to manage language switching and saving user preferences.
+
+### Features
+- **Improved Language Management**: The new `changeLanguage` method provides a simpler interface for changing the app's language dynamically.
+- **Backward Compatibility**: Ensured backward compatibility with existing language data stored in JSON format.
+- **Automatic UI Update**: As in the previous version, the UI automatically updates when the language is changed.
+- **Persistent Language Preferences**: User-selected languages are still saved and restored in future sessions.
+
+### Bug Fixes
+- **Performance Improvements**: Optimized the way language files are loaded and managed, resulting in faster language switching.
 
 ## Version 1.0.0
 

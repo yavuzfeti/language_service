@@ -25,24 +25,19 @@ class Languages
     String? localCode = await storage.read(key: "languageCode");
     if(localCode != null && localCode != "")
     {
-      changeLanguage(int.parse(localCode));
+      await changeLanguage(int.parse(localCode));
     }
     else if (window.locales.isNotEmpty && languageCodes.contains(window.locales.first.languageCode))
     {
-      changeLanguage(languageCodes.indexOf(window.locales.first.languageCode.toString()));
+      await changeLanguage(languageCodes.indexOf(window.locales.first.languageCode.toString()));
     }
     else
     {
-      changeLanguage(languageCodes.indexOf("en"));
+      await changeLanguage(languageCodes.indexOf("en"));
     }
   }
 
-  static void saveLanguage(int value) async
-  {
-    changeLanguage(value);
-  }
-
-  static void changeLanguage(int value) async
+  static Future<void> changeLanguage(int value) async
   {
     code = value;
     DEF = await jsonDecode(await rootBundle.loadString("${path+codes[value]}.json"));
@@ -115,7 +110,7 @@ class _LanguageWidgetState extends State<LanguageWidget>
           onChanged: (value) async
           {
             setState(() {
-              Languages.saveLanguage(languageLabels.indexOf(value!));
+              Languages.changeLanguage(languageLabels.indexOf(value!));
               widget.update.call();
             });
           },
