@@ -1,5 +1,10 @@
 # `language_service` Package - Changelog
 
+## Version 3.0.0
+
+### Major Updates
+- **Pub upgrade**: Updated the package to use the latest version of `flutter_secure_storage`.
+
 ## Version 2.0.0
 
 ### Major Updates
